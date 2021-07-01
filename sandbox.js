@@ -52,13 +52,33 @@ const filteredFemale = characters.filter(
 	character => character.gender === 'female'
 );
 
-console.log(filteredFemale);
+// console.log(filteredFemale);
 
 //***MAP***
 //1. Get array of all names
+const mappedNames = characters.map(character => character.name);
+
+// console.log(mappedNames);
+
 //2. Get array of all heights
+const mappedHeights = characters.map(character => character.height);
+
+// console.log(mappedHeights);
+
 //3. Get array of objects with just name and height properties
+const mappedNameHeights = characters.map(character => ({
+	name: character.name,
+	height: character.height
+}));
+
+// console.log(mappedNameHeights);
+
 //4. Get array of all first names
+const mappedHFirstNames = characters.map(
+	character => character.name.split(' ')[0]
+);
+
+console.log(mappedHFirstNames);
 
 //***REDUCE***
 //1. Get total mass of all characters
