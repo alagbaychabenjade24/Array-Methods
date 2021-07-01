@@ -29,6 +29,29 @@ const characters = [
 	}
 ];
 
+//***SOME***
+//1. Is there at least one male character?
+const someMale = characters.some(character => character.gender === 'male');
+
+// console.log(someMale);
+
+//2. Is there at least one character with blue eyes?
+const someBlueEyes = characters.some(
+	character => character.eye_color === 'blue'
+);
+
+// console.log(someBlueEyes);
+
+//3. Is there at least one character taller than 210?
+const someTaller = characters.some(character => character.height > 200);
+
+// console.log(someTaller);
+
+//4. Is there at least one character that has mass less than 50?
+const someMass = characters.some(character => character.mass < 50);
+
+// console.log(someMass);
+
 //***SORT***
 //1. Sort by mass
 const sortedMass = characters.sort((a, b) => b.mass - a.mass);
@@ -48,7 +71,7 @@ const sortedName = characters.sort((a, b) => (a.name > b.name ? -1 : 1));
 //4. Sort by gender
 const sortedGender = characters.sort(a => (a.gender === 'female' ? 1 : -1));
 
-console.log(sortedGender);
+// console.log(sortedGender);
 
 //***REDUCE***
 //1. Get total mass of all characters
@@ -140,9 +163,3 @@ const mappedHFirstNames = characters.map(
 //2. Does every character have mass more than 40?
 //3. Is every character shorter than 200?
 //4. Is every character male?
-
-//***SOME***
-//1. Is there at least one male character?
-//2. Is there at least one character with blue eyes?
-//3. Is there at least one character taller than 210?
-//4. Is there at least one character that has mass less than 50?
