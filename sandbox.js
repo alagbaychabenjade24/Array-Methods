@@ -29,6 +29,40 @@ const characters = [
 	}
 ];
 
+//***REDUCE***
+//1. Get total mass of all characters
+const reducedMass = characters.reduce((acc, curr) => (curr.mass += acc), 0);
+
+// console.log(reducedMass);
+
+//2. Get total height of all characters
+const reducedHeight = characters.reduce((acc, curr) => (curr.height += acc), 0);
+
+// console.log(reducedHeight);
+
+//3. Get total number of characters by eye color
+const reducedCharcEye = characters.reduce((acc, curr) => {
+	const color = curr.eye_color;
+
+	if (acc[color]) {
+		acc[color]++;
+	} else {
+		acc[color] = 1;
+	}
+
+	return acc;
+}, {});
+
+// console.log(reducedCharcEye);
+
+//4. Get total number of characters in all the character names
+const reducedCharcNames = characters.reduce(
+	(acc, curr) => (acc += curr.name.length),
+	0
+);
+
+console.log(reducedCharcNames);
+
 //***FILTER***
 //1. Get characters with mass greater than 100
 const filteredMass = characters.filter(character => character.mass > 100);
@@ -78,13 +112,7 @@ const mappedHFirstNames = characters.map(
 	character => character.name.split(' ')[0]
 );
 
-console.log(mappedHFirstNames);
-
-//***REDUCE***
-//1. Get total mass of all characters
-//2. Get total height of all characters
-//3. Get total number of characters by eye color
-//4. Get total number of characters in all the character names
+// console.log(mappedHFirstNames);
 
 //***SORT***
 //1. Sort by mass
