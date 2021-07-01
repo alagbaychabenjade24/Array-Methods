@@ -29,6 +29,27 @@ const characters = [
 	}
 ];
 
+//***SORT***
+//1. Sort by mass
+const sortedMass = characters.sort((a, b) => b.mass - a.mass);
+
+// console.log(sortedMass);
+
+//2. Sort by height
+const sortedHeight = characters.sort((a, b) => b.height - a.height);
+
+// console.log(sortedHeight);
+
+//3. Sort by name
+const sortedName = characters.sort((a, b) => (a.name > b.name ? -1 : 1));
+
+// console.log(sortedName);
+
+//4. Sort by gender
+const sortedGender = characters.sort(a => (a.gender === 'female' ? 1 : -1));
+
+console.log(sortedGender);
+
 //***REDUCE***
 //1. Get total mass of all characters
 const reducedMass = characters.reduce((acc, curr) => (curr.mass += acc), 0);
@@ -61,7 +82,7 @@ const reducedCharcNames = characters.reduce(
 	0
 );
 
-console.log(reducedCharcNames);
+// console.log(reducedCharcNames);
 
 //***FILTER***
 //1. Get characters with mass greater than 100
@@ -113,12 +134,6 @@ const mappedHFirstNames = characters.map(
 );
 
 // console.log(mappedHFirstNames);
-
-//***SORT***
-//1. Sort by mass
-//2. Sort by height
-//3. Sort by name
-//4. Sort by gender
 
 //***EVERY***
 //1. Does every character have blue eyes?
