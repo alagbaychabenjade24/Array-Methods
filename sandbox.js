@@ -29,6 +29,29 @@ const characters = [
 	}
 ];
 
+//***EVERY***
+//1. Does every character have blue eyes?
+const everyBlueEyes = characters.every(
+	character => character.eye_color === 'blue'
+);
+
+// console.log(everyBlueEyes);
+
+//2. Does every character have mass more than 40?
+const everyMass = characters.every(character => character.mass > 40);
+
+// console.log(everyMass);
+
+//3. Is every character shorter than 200?
+const everyHeight = characters.every(character => character.height < 200);
+
+// console.log(everyHeight);
+
+//4. Is every character male?
+const everyMale = characters.every(character => character.gender === 'male');
+
+console.log(everyMale);
+
 //***SOME***
 //1. Is there at least one male character?
 const someMale = characters.some(character => character.gender === 'male');
@@ -157,9 +180,3 @@ const mappedHFirstNames = characters.map(
 );
 
 // console.log(mappedHFirstNames);
-
-//***EVERY***
-//1. Does every character have blue eyes?
-//2. Does every character have mass more than 40?
-//3. Is every character shorter than 200?
-//4. Is every character male?
